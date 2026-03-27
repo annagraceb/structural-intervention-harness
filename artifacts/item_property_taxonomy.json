@@ -1,0 +1,54 @@
+{
+  "frozen": "2026-03-25T08:30Z",
+  "description": "Item-property taxonomy for Tier 3 semantic coherence testing via Fisher's exact test",
+  "properties": {
+    "P1_entity_count": {
+      "description": "Number of entities in the task (3 vs 5)",
+      "split": {"3_entities": "tasks with 'three_objects' suffix", "5_entities": "tasks with 'five_objects' suffix"},
+      "n_per_group": [500, 500],
+      "baseline_accuracy": {"3_entities": 0.360, "5_entities": 0.220},
+      "rationale": "Cleanest structural split. 5-entity tasks require more computation and have lower baseline."
+    },
+    "P2_task_type": {
+      "description": "Task family: tracking (state update) vs deduction (constraint satisfaction)",
+      "split": {"tracking": "tracking_shuffled_objects_*", "deduction": "logical_deduction_*"},
+      "n_per_group": [500, 500],
+      "baseline_accuracy": {"tracking": 0.258, "deduction": 0.322},
+      "rationale": "Tests whether intervention effects are reasoning-type-specific."
+    },
+    "P3_swap_count": {
+      "description": "Number of swap/switch operations in tracking tasks (low vs high)",
+      "split": {"low_swaps": "1 swap/switch operation", "high_swaps": "4+ swap/switch operations"},
+      "n_per_group": [106, 98],
+      "applies_to": ["tracking_shuffled_objects_three_objects", "tracking_shuffled_objects_five_objects"],
+      "rationale": "Tests whether interventions differentially affect items requiring more sequential state updates."
+    },
+    "P4_input_length": {
+      "description": "Input text length tercile (short vs long, within each task)",
+      "split": {"short": "bottom tercile of character count within task", "long": "top tercile of character count within task"},
+      "n_per_group": ["~83 per task, ~333 total", "~83 per task, ~333 total"],
+      "rationale": "Control property. Weak theoretical motivation but tests positional encoding effects."
+    },
+    "P5_queried_position": {
+      "description": "Whether the question asks about a boundary vs interior entity (deduction tasks only)",
+      "split": {"boundary": "question asks about first or last position", "interior": "question asks about second/middle positions"},
+      "n_per_group": [150, 100],
+      "applies_to": ["logical_deduction_three_objects", "logical_deduction_five_objects"],
+      "baseline_accuracy": {"boundary": 0.20, "interior": 0.30},
+      "rationale": "Boundary positions are harder; tests whether interventions help/hurt constraint propagation."
+    },
+    "P6_answer_position": {
+      "description": "Whether the correct answer is the first option (A) vs last option (C or E)",
+      "split": {"first_option": "correct answer is (A)", "last_option": "correct answer is (C) for 3-obj or (E) for 5-obj"},
+      "n_per_group": [257, 261],
+      "baseline_accuracy": {"first_option": 0.354, "last_option": 0.352},
+      "rationale": "Near-zero baseline gap makes any post-intervention divergence diagnostic of positional bias changes."
+    }
+  },
+  "testing_protocol": {
+    "test": "Fisher's exact test (two-sided)",
+    "alpha": 0.05,
+    "application": "For each Tier 2 result, compute flip rates within each property group and test for non-random distribution of flipped items across groups.",
+    "table_construction": "2x2 table: rows = property group (A vs B), columns = flipped vs not-flipped. 'Flipped' means the item changed correctness (either direction) between baseline and intervention."
+  }
+}

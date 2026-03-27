@@ -1,0 +1,19 @@
+{
+  "determinism_status": "deterministic",
+  "baseline_accuracy": 0.257,
+  "baseline_accuracy_pct": 25.7,
+  "correct_count": 257,
+  "total_items": 1000,
+  "comparison": {
+    "identical": 1000,
+    "different": 0,
+    "diff_items": []
+  },
+  "wall_clock_per_pass_seconds": 197.99481654167175,
+  "budget": {
+    "coarse_sweep_hours": 28.324258477489153,
+    "remaining_hours": 61.67574152251085,
+    "feasible": true
+  },
+  "unstable_items": []
+}

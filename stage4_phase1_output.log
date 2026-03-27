@@ -1,0 +1,144 @@
+============================================================
+STAGE 4 PHASE 1: GPU Experiments
+============================================================
+Loading model: Qwen/Qwen2.5-1.5B
+  VRAM: 4.97GB allocated, 5.17GB reserved, 12.88GB total
+  Headroom: 7.72GB
+  Creating pristine weight copy on CPU...
+  Pristine copy created. Checksum: 44a37073028ff42f...
+
+  Total Phase 1 trials: 21, pending: 21
+
+[1/21] S4-L9-ABL-H01: W4_head_surgery
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+  S4-L9-ABL-H01: Δ=+0.4pp  +42/-38  p=0.7376  (181.3s)
+
+[2/21] S4-L9-NEG-H01: W4_head_surgery
+  S4-L9-NEG-H01: Δ=+1.2pp  +73/-61  p=0.3420  (170.5s)
+
+[3/21] S4-L9-ABL-H02: W4_head_surgery
+  S4-L9-ABL-H02: Δ=+0.0pp  +34/-34  p=1.0000  (176.4s)
+
+[4/21] S4-L9-NEG-H02: W4_head_surgery
+  S4-L9-NEG-H02: Δ=+0.6pp  +58/-52  p=0.6338  (171.5s)
+
+[5/21] S4-L9-ABL-H04: W4_head_surgery
+  S4-L9-ABL-H04: Δ=-0.8pp  +36/-44  p=0.4340  (176.5s)
+
+[6/21] S4-L9-NEG-H04: W4_head_surgery
+  S4-L9-NEG-H04: Δ=+0.7pp  +90/-83  p=0.6484  (172.7s)
+
+[7/21] S4-L9-ABL-H05: W4_head_surgery
+  S4-L9-ABL-H05: Δ=-1.3pp  +32/-45  p=0.1711  (176.1s)
+
+[8/21] S4-L9-NEG-H05: W4_head_surgery
+  S4-L9-NEG-H05: Δ=-1.0pp  +75/-85  p=0.4769  (173.1s)
+
+[9/21] S4-L9-ABL-H06: W4_head_surgery
+  S4-L9-ABL-H06: Δ=+0.6pp  +44/-38  p=0.5811  (176.2s)
+
+[10/21] S4-L9-NEG-H06: W4_head_surgery
+  S4-L9-NEG-H06: Δ=+2.9pp  +102/-73  p=0.0340  (172.8s)
+
+[11/21] S4-L9-ABL-H08: W4_head_surgery
+  S4-L9-ABL-H08: Δ=-1.2pp  +35/-47  p=0.2242  (176.5s)
+
+[12/21] S4-L9-NEG-H08: W4_head_surgery
+  S4-L9-NEG-H08: Δ=+0.4pp  +60/-56  p=0.7807  (172.9s)
+
+[13/21] S4-L9-ABL-H09: W4_head_surgery
+  S4-L9-ABL-H09: Δ=+0.3pp  +38/-35  p=0.8151  (176.3s)
+
+[14/21] S4-L9-NEG-H09: W4_head_surgery
+  S4-L9-NEG-H09: Δ=+1.7pp  +72/-55  p=0.1554  (173.7s)
+
+[15/21] S4-L9-ABL-H10: W4_head_surgery
+  S4-L9-ABL-H10: Δ=+0.9pp  +74/-65  p=0.4976  (175.7s)
+
+[16/21] S4-L9-NEG-H10: W4_head_surgery
+  S4-L9-NEG-H10: Δ=+0.8pp  +119/-111  p=0.6445  (173.8s)
+
+[17/21] S4-COMB-01: L9 attn zero + L18 H11 ablate
+  S4-COMB-01: Δ=+2.2pp  +99/-77  p=0.1132  (176.0s)
+
+[18/21] S4-COMB-02: L9 attn zero + L20 gate uniform spectrum
+  S4-COMB-02: Δ=+1.5pp  +111/-96  p=0.3305  (174.5s)
+
+[19/21] S4-COMB-03: L9 attn zero + L18 H11 ablate + L20 gate uniform
+  S4-COMB-03: Δ=+0.9pp  +119/-110  p=0.5971  (175.6s)
+
+[20/21] S4-COMB-04: L9 attn skip + L6 H5 scale 5x
+  ERROR: 'ActivationHook' object has no attribute 'handles'
+Traceback (most recent call last):
+  File "/home/cisco/structural_intervention_harness/stage4_phase1.py", line 268, in main
+    weight_mods, hook = execute_combined_intervention(model, wm, spec, config.DEVICE)
+  File "/home/cisco/structural_intervention_harness/stage4_phase1.py", line 153, in execute_combined_intervention
+    combined_hook.handles.extend(h.handles)
+AttributeError: 'ActivationHook' object has no attribute 'handles'
+
+[21/21] S4-COMB-05: All 5 improvements combined
+  ERROR: 'ActivationHook' object has no attribute 'handles'
+Traceback (most recent call last):
+  File "/home/cisco/structural_intervention_harness/stage4_phase1.py", line 268, in main
+    weight_mods, hook = execute_combined_intervention(model, wm, spec, config.DEVICE)
+  File "/home/cisco/structural_intervention_harness/stage4_phase1.py", line 153, in execute_combined_intervention
+    combined_hook.handles.extend(h.handles)
+AttributeError: 'ActivationHook' object has no attribute 'handles'
+
+--- Experiment 1C: Cross-Task Generalization ---
+
+  Loading task: boolean_expressions
+  250 items loaded
+  Running baseline...
+  Baseline: 0/250 = 0.0%
+  Running L9 attn zero intervention...
+  boolean_expressions: baseline=0.0%, intervention=0.0%, delta=+0.0pp, +0/-0, p=1.0000
+
+  Loading task: navigate
+  250 items loaded
+  Running baseline...
+  Baseline: 0/250 = 0.0%
+  Running L9 attn zero intervention...
+  navigate: baseline=0.0%, intervention=0.0%, delta=+0.0pp, +0/-0, p=1.0000
+
+  Loading task: web_of_lies
+  250 items loaded
+  Running baseline...
+  Baseline: 0/250 = 0.0%
+  Running L9 attn zero intervention...
+  web_of_lies: baseline=0.0%, intervention=0.0%, delta=+0.0pp, +0/-0, p=1.0000
+
+  Phase 1 complete in 58.8 minutes
+
+============================================================
+ANALYSIS: L9 Per-Head Profile
+============================================================
+
+  Head    Ablate Δ    Ablate p    Negate Δ    Negate p
+  --------------------------------------------------
+     0      +0.7pp      0.5793      +0.1pp      1.0000
+     1      +0.4pp      0.7376      +1.2pp      0.3420
+     2      +0.0pp      1.0000      +0.6pp      0.6338
+     3      +0.9pp      0.2892      +0.9pp      0.4262
+     4      -0.8pp      0.4340      +0.7pp      0.6484
+     5      -1.3pp      0.1711      -1.0pp      0.4769
+     6      +0.6pp      0.5811      +2.9pp      0.0340
+     7      +0.3pp      0.8199      +1.8pp      0.1417
+     8      -1.2pp      0.2242      +0.4pp      0.7807
+     9      +0.3pp      0.8151      +1.7pp      0.1554
+    10      +0.9pp      0.4976      +0.8pp      0.6445
+    11      +0.8pp      0.4030      +2.5pp      0.0551
+
+  Sum of individual ablation deltas: +1.6pp
+  Full L9 attention zero (W3-0020): +3.7pp
+  -> Effect may be synergistic (sum < full zero)
+
+============================================================
+ANALYSIS: Combined Interventions
+============================================================
+  S4-COMB-01: L9 attn zero + L18 H11 ablate
+    Δ=+2.2pp  p=0.1132  +99/-77
+  S4-COMB-02: L9 attn zero + L20 gate uniform spectrum
+    Δ=+1.5pp  p=0.3305  +111/-96
+  S4-COMB-03: L9 attn zero + L18 H11 ablate + L20 gate uniform
+    Δ=+0.9pp  p=0.5971  +119/-110

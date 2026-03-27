@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+.venv/
+venv/
+models/
+
+# Raw DB too large for GitHub (146MB); use experiment.db.gz instead
+experiment.db

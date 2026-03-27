@@ -1,0 +1,222 @@
+[
+  {
+    "trial_id": "W3-0006",
+    "category": "W3",
+    "accuracy_delta_pp": -4.499999999999998,
+    "flipped_to_correct": 158,
+    "flipped_to_incorrect": 203,
+    "p_value": 0.02044208626776252,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A3-0042",
+    "category": "A3",
+    "accuracy_delta_pp": -4.499999999999998,
+    "flipped_to_correct": 143,
+    "flipped_to_incorrect": 188,
+    "p_value": 0.015459633987649107,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W2-0090",
+    "category": "W2",
+    "accuracy_delta_pp": -4.399999999999999,
+    "flipped_to_correct": 156,
+    "flipped_to_incorrect": 200,
+    "p_value": 0.022534052112493926,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W3-0026",
+    "category": "W3",
+    "accuracy_delta_pp": -4.399999999999999,
+    "flipped_to_correct": 151,
+    "flipped_to_incorrect": 195,
+    "p_value": 0.02066085966507926,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W3-0015",
+    "category": "W3",
+    "accuracy_delta_pp": -4.099999999999998,
+    "flipped_to_correct": 158,
+    "flipped_to_incorrect": 199,
+    "p_value": 0.03411145932996001,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W3-0002",
+    "category": "W3",
+    "accuracy_delta_pp": -3.9999999999999982,
+    "flipped_to_correct": 158,
+    "flipped_to_incorrect": 198,
+    "p_value": 0.03858505940039794,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W3-0000",
+    "category": "W3",
+    "accuracy_delta_pp": -3.799999999999998,
+    "flipped_to_correct": 156,
+    "flipped_to_incorrect": 194,
+    "p_value": 0.0478038035445325,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W3-0020",
+    "category": "W3",
+    "accuracy_delta_pp": 3.7000000000000033,
+    "flipped_to_correct": 98,
+    "flipped_to_incorrect": 61,
+    "p_value": 0.00415847306478204,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A3-0028",
+    "category": "A3",
+    "accuracy_delta_pp": 3.7000000000000033,
+    "flipped_to_correct": 98,
+    "flipped_to_incorrect": 61,
+    "p_value": 0.00415847306478204,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W3-0038",
+    "category": "W3",
+    "accuracy_delta_pp": -3.6999999999999975,
+    "flipped_to_correct": 142,
+    "flipped_to_incorrect": 179,
+    "p_value": 0.04433452838568932,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W4-0039",
+    "category": "W4",
+    "accuracy_delta_pp": -3.6999999999999975,
+    "flipped_to_correct": 115,
+    "flipped_to_incorrect": 152,
+    "p_value": 0.027395935418364967,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A3-0054",
+    "category": "A3",
+    "accuracy_delta_pp": -3.6999999999999975,
+    "flipped_to_correct": 136,
+    "flipped_to_incorrect": 173,
+    "p_value": 0.04038984585966203,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A3-0036",
+    "category": "A3",
+    "accuracy_delta_pp": -3.599999999999998,
+    "flipped_to_correct": 113,
+    "flipped_to_incorrect": 149,
+    "p_value": 0.030399237374376598,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W1-0034",
+    "category": "W1",
+    "accuracy_delta_pp": -3.4999999999999973,
+    "flipped_to_correct": 121,
+    "flipped_to_incorrect": 156,
+    "p_value": 0.04087252678570341,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A3-0026",
+    "category": "A3",
+    "accuracy_delta_pp": -3.4999999999999973,
+    "flipped_to_correct": 137,
+    "flipped_to_incorrect": 172,
+    "p_value": 0.05291341877449007,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A3-0075",
+    "category": "A3",
+    "accuracy_delta_pp": 3.400000000000003,
+    "flipped_to_correct": 135,
+    "flipped_to_incorrect": 101,
+    "p_value": 0.03148604969825743,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A3-0064",
+    "category": "A3",
+    "accuracy_delta_pp": -3.3999999999999977,
+    "flipped_to_correct": 112,
+    "flipped_to_incorrect": 146,
+    "p_value": 0.03972106639094216,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W2-0015",
+    "category": "W2",
+    "accuracy_delta_pp": -3.299999999999997,
+    "flipped_to_correct": 124,
+    "flipped_to_incorrect": 157,
+    "p_value": 0.05607377108783885,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "W2-0061",
+    "category": "W2",
+    "accuracy_delta_pp": -3.299999999999997,
+    "flipped_to_correct": 158,
+    "flipped_to_incorrect": 191,
+    "p_value": 0.08658146120190945,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  },
+  {
+    "trial_id": "A2-0024",
+    "category": "A2",
+    "accuracy_delta_pp": 3.200000000000003,
+    "flipped_to_correct": 80,
+    "flipped_to_incorrect": 48,
+    "p_value": 0.005925206606743137,
+    "bh_significant": false,
+    "tier": null,
+    "justification": "Not significant after BH correction"
+  }
+]

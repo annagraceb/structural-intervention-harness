@@ -1,0 +1,104 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "model_revision": null,
+  "benchmark_tasks": [
+    "tracking_shuffled_objects_three_objects",
+    "logical_deduction_three_objects",
+    "tracking_shuffled_objects_five_objects",
+    "logical_deduction_five_objects"
+  ],
+  "task_item_counts": {
+    "tracking_shuffled_objects_three_objects": 250,
+    "logical_deduction_three_objects": 250,
+    "tracking_shuffled_objects_five_objects": 250,
+    "logical_deduction_five_objects": 250
+  },
+  "total_items": 1000,
+  "baseline_accuracy": 0.257,
+  "baseline_accuracy_pct": 25.7,
+  "correct_count": 257,
+  "degenerate_count": 0,
+  "seconds_per_item": 0.1936001970767975,
+  "wall_clock_full_pass": 193.60019707679749,
+  "vram_peak_gb": 5.2887424,
+  "vram_headroom_gb": 7.5956352,
+  "architecture": {
+    "layers_path": "model.layers",
+    "has_separate_qkv": true,
+    "layer_index_position": 2,
+    "projections": {
+      "q_proj": {
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.float16"
+      },
+      "k_proj": {
+        "shape": [
+          256,
+          1536
+        ],
+        "dtype": "torch.float16"
+      },
+      "v_proj": {
+        "shape": [
+          256,
+          1536
+        ],
+        "dtype": "torch.float16"
+      },
+      "o_proj": {
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "n_layers": 28,
+    "hidden_size": 1536,
+    "num_attention_heads": 12,
+    "num_kv_heads": 2,
+    "intermediate_size": 8960,
+    "vocab_size": 151936,
+    "head_dim": 128,
+    "is_gqa": true
+  },
+  "power_analysis": {
+    "top_ranked": {
+      "bh_threshold": 9.70873786407767e-05,
+      "min_discordant_b0": 15,
+      "min_discordant_b1": 19,
+      "min_discordant_b2": 23,
+      "min_accuracy_delta_b0_pp": 1.5
+    },
+    "median_ranked": {
+      "bh_threshold": 0.024951456310679614,
+      "min_discordant_b0": 7,
+      "min_discordant_b1": 10,
+      "min_discordant_b2": 13,
+      "min_accuracy_delta_b0_pp": 0.7000000000000001
+    },
+    "tier2_feasibility": {
+      "items_for_3pp": 30,
+      "min_flips_needed_top": 15,
+      "feasible": true
+    }
+  },
+  "budget_estimate": {
+    "time_per_pass_hours": 0.053777832521332634,
+    "coarse_sweep_hours": 27.695583748486307,
+    "effective_budget_hours": 90.0,
+    "remaining_hours": 62.30441625151369,
+    "feasible": true
+  },
+  "inference_config": {
+    "torch_dtype": "float16",
+    "attn_implementation": "eager",
+    "deterministic_algorithms": true,
+    "temperature": 0,
+    "evaluation_method": "log_probability",
+    "few_shot": false
+  }
+}
